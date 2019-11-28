@@ -1,0 +1,10 @@
+https://stackify.com/streams-guide-java-8/
+https://stackoverflow.com/questions/51333730/memory-optimization-of-java-collectors-tomap
+https://java8tips.readthedocs.io/en/stable/advcollectors.html
+
+HashMap<String, Item> map2 =
+                list.stream().collect(Collectors.toMap(Item::getKey,  // key for map
+                        Function.identity(),    // value for map
+                        (o,n) -> o,             // merge function in case of conflict with keys
+                        HashMap::new));         // // map factory - we want HashMap and not
+        System.out.println(map2);

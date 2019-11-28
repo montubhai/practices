@@ -1,0 +1,79 @@
+https://www.journaldev.com/8697/javase8-interview-questions-part1
+
+1) What is Lambda Expression?
+Ans:)=> Lambda Expression is an anonymous function which accepts a set of input parameters and returns results.
+Lambda Expression is a block of code without any name,
+with or without parameters and with or without results. This block of code is executed on demand.
+
+------------------------------------------------------------------------------------------------------
+
+2) What are the three parts of a Lambda Expression? What is the type of Lambda Expression?
+
+Ans:)=>A Lambda Expression contains 3 parts:
+       Parameter List
+       A Lambda Expression can contain zero or one or more parameters. It is optional.
+
+       Lambda Arrow Operator
+       “->” is known as Lambda Arrow operator. It separates parameters list and body.
+
+       Lambda Expression Body
+
+The type of “Journal Dev” is java.lang.String. The type of “true” is Boolean.
+In the same way, what is the type of a Lambda Expression?
+The Type of a Lambda Expression is a Functional Interface.
+
+Example:- What is the type of the following Lambda Expression?
+
+
+() -> System.out.println("Hello World");
+This Lambda Expression does not have parameters and does return any results.
+ So it’s type is “java.lang.Runnable” Functional Interface.
+
+----------------------------------------------------------------------------------------------------------
+
+3) What is a Functional Interface? What is SAM Interface?
+Ans:)=> A Functional Interface is an interface, which contains one and only one abstract method.
+  Functional Interface is also know as SAM Interface because it contains only one abstract method.
+  SAM Interface stands for Single Abstract Method Interface. Java SE 8 API has defined many Functional Interfaces.
+
+-----------------------------------------------------------------------------------------------------------
+
+4)Is is possible to define our own Functional Interface?
+  What is @FunctionalInterface? What are the rules to define a Functional Interface?
+
+Ans:)=>  Yes, it is possible to define our own Functional Interfaces.
+  We use Java SE 8’s @FunctionalInterface annotation to mark an interface as Functional Interface.
+  We need to follow these rules to define a Functional Interface:
+
+  a) Define an interface with one and only one abstract method.
+  b) We cannot define more than one abstract method.
+  c) Use @FunctionalInterface annotation in interface definition.
+  d) We can define any number of other methods like Default methods, Static methods.
+  e) If we override java.lang.Object class’s method as an abstract method, which does not count as an abstract method.
+
+------------------------------------------------------------------------------------------------------------
+
+5) Is @FunctionalInterface annotation mandatory to define a Functional Interface? What is the use of @FunctionalInterface annotation?
+   Why do we need Functional Interfaces in Java?
+Ans:)=> It is not mandatory to define a Functional Interface with @FunctionalInterface annotation.
+    If we don’t want, We can omit this annotation. However, if we use it in Functional Interface definition,
+    Java Compiler forces to use one and only one abstract method inside that interface.
+    Why do we need Functional Interfaces? The type of a Java SE 8’s Lambda Expression is a Functional Interface. Whereever we use Lambda Expressions that means we are using Functional Interfaces.
+
+-------------------------------------------------------------------------------------------------------------
+
+6) When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
+Ans:)=>   When our Java project wants to perform the following operations, it’s better to use Java 8 Stream API to get lot of benefits:
+
+   a) When we want perform Database like Operations. For instance, we want perform groupby operation, orderby operation etc.
+   b) When want to Perform operations Lazily.
+   c) When we want to write Functional Style programming.
+   d) When we want to perform Parallel Operations.
+   e) When want to use Internal Iteration
+   f) When we want to perform Pipelining operations.
+   g) When we want to achieve better performance.
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
